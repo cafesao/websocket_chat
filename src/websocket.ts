@@ -1,5 +1,7 @@
 import { io } from "./http"
 
 io.on("connection", (socket) => {
-  console.log(`User ID: ${socket.id}`)
+  socket.on("join", (data) => {
+    console.log(data)
+  })
 })
